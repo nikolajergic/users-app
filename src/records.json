@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "firstName": "Marko",
+        "lastName": "Dimic",
+        "username": "Marko Dimic",
+        "email": "marko@gmail.com",
+        "phone": "063546494",
+        "addres": "Novi sad",
+        "salary": "400e"
+    },
+    {
+        "id": 2,
+        "firstName": "Nikola",
+        "lastName": "Jergic",
+        "username": "Nikola Jergic",
+        "email": "nikola@gmail.com",
+        "phone": "0638111155",
+        "addres": "Novi sad",
+        "salary": "600e"
+    },
+    {
+        "id": 3,
+        "firstName": "Miroslav",
+        "lastName": "Jankovic",
+        "username": "Jankovic Miroslav",
+        "email": "miroslav@gmail.com",
+        "phone": "063546443",
+        "addres": "Novi sad",
+        "salary": "1000e"
+    }
+]

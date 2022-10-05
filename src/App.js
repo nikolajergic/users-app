@@ -8,17 +8,15 @@ import {
 import './App.css';
 import CreateUser from './pages/CreateUser';
 import Users from "./pages/Users";
+import Navbar from './components/NavBar';
+import './App.css';
+
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <nav>
-          <ul>
-            <li><Link to="/CreateUser">Create User</Link></li>
-            <li><Link to="/Users">Users</Link></li>
-          </ul>
-        </nav>
+      <Navbar/>
         <Switch>
           <Route exact path="/CreateUser">
             < CreateUser/>

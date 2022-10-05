@@ -21,7 +21,7 @@ class UserService {
         return true
     }
 
-    AddUser(newUser) {
+    addUser(newUser) {
       for (const user of this.users) {
           if (user.username === newUser.username) {
               throw new Error('username exists');
@@ -33,6 +33,20 @@ class UserService {
       this.nextId++;
 
       return this.users[this.users.length-1];
+    }
+
+    Show(id) {
+        try {
+            const  data  = this.client.get(this.users);
+      
+            return this.users;
+          } catch (error) {
+            console.log(error);
+          }
+    }
+
+    Edit() {
+
     }
 
     
