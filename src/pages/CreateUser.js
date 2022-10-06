@@ -88,7 +88,7 @@ function CreateUser() {
                         setNewUser({ ...newUser, salary: target.value })
                     }
                 />
-                {setError && <h1>Name exist</h1>}
+                {setError && <h1>Username exists</h1>}
                 <button
                     onClick={(event) => {
                         event.preventDefault();

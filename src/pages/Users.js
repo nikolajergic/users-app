@@ -12,6 +12,21 @@ function Users() {
           setUsers(UserService.getAll());
         },
         [])
+    
+    
+  const handleDeleteClick = (userId) => {
+    const newUsers = [...users];
+
+    const index = users.findIndex((user) => user.id === userId);
+
+    newUsers.splice(index, 1);
+
+    setUsers(newUsers);
+  };
+
+    
+        
+ 
         
     return (
         <div>
@@ -25,7 +40,6 @@ function Users() {
                 <th>Phone</th>
                 <th>Addres</th>
                 <th>Salary</th>
-                <th>Edit</th>
                 <th>Delete</th>
             </tr>
         </thead>
@@ -39,10 +53,12 @@ function Users() {
                 <th>{users.phone}</th>
                 <th>{users.addres}</th>
                 <th>{users.salary}</th>
+                <th><button onClick={handleDeleteClick}>Delete</button></th>
             </tr>
             ))}
         </tbody>
         </table>
+        <input type="text" placeholder="Search..."/>
         </div>
       );
     }

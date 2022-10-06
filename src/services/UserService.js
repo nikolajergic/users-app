@@ -9,7 +9,7 @@ class UserService {
         return this.users;
     }
 
-    delete(id) {
+    handleDelete(id) {
         const index = this.user.findIndex((user) => user.id === id);
 
         if (index === -1) {
@@ -33,16 +33,6 @@ class UserService {
       this.nextId++;
 
       return this.users[this.users.length-1];
-    }
-
-    Show(id) {
-        try {
-            const  data  = this.client.get(this.users);
-      
-            return this.users;
-          } catch (error) {
-            console.log(error);
-          }
     }
 
     Edit() {
