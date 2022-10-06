@@ -1,6 +1,6 @@
 class UserService {
-  
-    constructor () {
+
+    constructor() {
         this.users = [];
         this.nextId = 0;
     }
@@ -13,7 +13,7 @@ class UserService {
         const index = this.user.findIndex((user) => user.id === id);
 
         if (index === -1) {
-        return false;
+            return false;
         }
 
         this.user.splice(index, 1);
@@ -22,24 +22,19 @@ class UserService {
     }
 
     addUser(newUser) {
-      for (const user of this.users) {
-          if (user.username === newUser.username) {
-              throw new Error('username exists');
-          }
-      }
-      
-      this.users.push({id: this.nextId, ...newUser});
+        for (const user of this.users) {
+            if (user.username === newUser.username) {
+                throw new Error('username exists');
+            }
+        }
 
-      this.nextId++;
+        this.users.push({ id: this.nextId, ...newUser });
 
-      return this.users[this.users.length-1];
+        this.nextId++;
+
+        return this.users[this.users.length - 1];
     }
 
-    Edit() {
-
-    }
-
-    
 
 }
 
